@@ -23,6 +23,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # collect static files
+RUN mkdir -p /app/sofomo_recruitment_task/static
 RUN python manage.py collectstatic --noinput
 
 RUN python manage.py makemigrations
