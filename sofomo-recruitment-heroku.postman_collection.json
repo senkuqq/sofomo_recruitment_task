@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "62942681-b565-4adc-bda5-a472a3b46811",
+		"name": "sofomo-recruitment-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get access token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\",\r\n\"password\":\"admin\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sofomo-recruitment.herokuapp.com/api/v1/token/",
+					"protocol": "https",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list geodatas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEwMzEzNzA1LCJqdGkiOiI2NTZhYTFkYTVhYjA0ZWM5ODI3NmYwNjQ1OTNlYzhmOSIsInVzZXJfaWQiOjF9.uFP0XjqArvjL0DAu1lak6ljrh8SOyET9AnPWjjsrFIc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sofomo-recruitment.herokuapp.com/api/v1/geolocations/",
+					"protocol": "https",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geolocations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list geodatas with filtering and order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEwMzE0MDM2LCJqdGkiOiIxZTJiNDdjZWM3MWU0OGQzOGYwY2M2ZjliZDJiM2Q3NiIsInVzZXJfaWQiOjF9.p2eorDMzZStZTE_YQrTSTBERqclaqh5a_dkIBVFk0NE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sofomo-recruitment.herokuapp.com/api/v1/geolocations/?country_code=US&ordering=-continent_code",
+					"protocol": "https",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geolocations",
+						""
+					],
+					"query": [
+						{
+							"key": "country_code",
+							"value": "US"
+						},
+						{
+							"key": "ordering",
+							"value": "-continent_code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add geodata",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEwMzEzNzA1LCJqdGkiOiI2NTZhYTFkYTVhYjA0ZWM5ODI3NmYwNjQ1OTNlYzhmOSIsInVzZXJfaWQiOjF9.uFP0XjqArvjL0DAu1lak6ljrh8SOyET9AnPWjjsrFIc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ip_address\": \"onet.pl\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sofomo-recruitment.herokuapp.com/api/v1/geolocations/",
+					"protocol": "https",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geolocations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get geodata details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEwMzEzNzA1LCJqdGkiOiI2NTZhYTFkYTVhYjA0ZWM5ODI3NmYwNjQ1OTNlYzhmOSIsInVzZXJfaWQiOjF9.uFP0XjqArvjL0DAu1lak6ljrh8SOyET9AnPWjjsrFIc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sofomo-recruitment.herokuapp.com/api/v1/geolocations/4/",
+					"protocol": "http",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geolocations",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete geodata",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEwMzEzNzA1LCJqdGkiOiI2NTZhYTFkYTVhYjA0ZWM5ODI3NmYwNjQ1OTNlYzhmOSIsInVzZXJfaWQiOjF9.uFP0XjqArvjL0DAu1lak6ljrh8SOyET9AnPWjjsrFIc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://sofomo-recruitment.herokuapp.com/api/v1/geolocations/4/",
+					"protocol": "http",
+					"host": [
+						"sofomo-recruitment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geolocations",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
