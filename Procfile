@@ -1,0 +1,1 @@
+web: gunicorn sofomo_recruitment_task.wsgi --log-file -
