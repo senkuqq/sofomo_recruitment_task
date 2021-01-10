@@ -23,7 +23,7 @@ To ensure everything is running properly run.
 ```sh
 $ docker exec -it app python manage.py test
 ```
-Creating superuser.
+Create superuser.
 ```sh
 $ docker exec -it app python manage.py createsuperuser
 ```
