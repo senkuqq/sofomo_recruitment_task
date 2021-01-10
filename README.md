@@ -10,7 +10,6 @@ Application is able to add, delete or provide geolocation data on the base of ip
 $ git clone https://github.com/senkuqq/sofomo_recruitment_task.git
 $ cd sofomo_recruitment_task
 $ docker build -t web:latest .
-$ docker run -d --name app -e "PORT=8765" -e "DEBUG=1" -p 8007:8765 web:latest
 ```
 
 # Running the application
