@@ -32,7 +32,7 @@ Endpoints api/v1/token/ and api/v1/token/refresh/ are for obtaining and refreshi
 Endpoints api/v1/geolocations/ is for creating and listing geolocations.
 
 # Online
-You can check online version on [heroku](http://sofomo-recruitment.herokuapp.com/).
+You can check online version on [heroku](https://sofomo-recruitment.herokuapp.com/api/v1/).
 
 There is file sofomo-recruitment-heroku.postman_collection.json which You can import to Postman and try endpoints by yourself! 
 
